@@ -10,6 +10,7 @@ namespace PSD_KpopZtation.Controllers
     public class CustomerController
     {
         Database1Entities db = Database.getInstance();
+        private static CustomerRepository custRepo = new CustomerRepository();
         public static string validate(string name, string email, string gender, string address, string password)
         {
             if(string.IsNullOrEmpty(name) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(address) || string.IsNullOrEmpty(password))
@@ -33,6 +34,8 @@ namespace PSD_KpopZtation.Controllers
             {
                 return "Address must end with \'Street\'";
             }
+
+            custRepo.addCustomer(name, email, gender, address, password);
 
             return "Success!";
         }

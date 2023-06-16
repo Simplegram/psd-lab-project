@@ -9,8 +9,7 @@ namespace PSD_KpopZtation.Factory
 {
     public class CustomerFactory
     {
-        Database1Entities db = Database.getInstance();
-        public static Customer create(int id, string name, string email, string gender, string address, string password)
+        public static Customer createCustomer(string name, string email, string gender, string address, string password)
         {
             Customer customer = new Customer();
 
@@ -20,6 +19,7 @@ namespace PSD_KpopZtation.Factory
             customer.CustomerGender = gender;
             customer.CustomerAddress = address;
             customer.CustomerPassword = password;
+            customer.CustomerRole = "Cust";
 
             return customer;
         }
