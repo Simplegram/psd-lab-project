@@ -49,5 +49,13 @@ namespace PSD_KpopZtation.Repositories
                 return "null";
             }
         }
+
+        public static Customer getCustomer(string email)
+        {
+            Customer customer;
+            customer = (from x in db.Customers where x.CustomerEmail.Equals(email) select x).FirstOrDefault();
+
+            return customer;
+        }
     }
 }

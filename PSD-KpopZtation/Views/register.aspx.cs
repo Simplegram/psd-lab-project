@@ -27,6 +27,11 @@ namespace PSD_KpopZtation
             string password = tbxPassword.Text;
 
             lblStatus.Text = CustomerController.validateRegister(name, email, gender, address, password);
+
+            if (lblStatus.Equals("Success!"))
+            {
+                Response.Redirect("~/Views/login.aspx");
+            }
         }
     }
 }

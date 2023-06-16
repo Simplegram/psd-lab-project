@@ -55,7 +55,7 @@ namespace PSD_KpopZtation.Controllers
 
             if (password.Equals(realPass))
             {
-                return "Successful Login";
+                return "Login Success";
             }
             else if (!password.Equals(realPass))
             {
