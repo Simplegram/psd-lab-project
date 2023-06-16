@@ -5,9 +5,9 @@
 2. Register customer to database
 3. Initial login page
 4. Login email and password validation
+5. Login cookie (remember me)
 
 ## TO-DO
-2. Login cookies (remember me)
 3. Navigation Bar
 4. Home
 5. Artist Detail
