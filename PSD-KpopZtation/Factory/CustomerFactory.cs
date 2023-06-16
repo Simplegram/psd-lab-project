@@ -12,7 +12,9 @@ namespace PSD_KpopZtation.Factory
         Database1Entities db = Database.getInstance();
         public static Customer create(int id, string name, string email, string gender, string address, string password)
         {
-            
+            Customer customer = new Customer();
+
+            return customer;
         }
     }
 }

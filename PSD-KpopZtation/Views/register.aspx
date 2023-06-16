@@ -12,7 +12,7 @@
     </div>
     <div>
         <asp:RadioButtonList ID="rblGender" runat="server">
-            <asp:ListItem>Male</asp:ListItem>
+            <asp:ListItem Selected="True">Male</asp:ListItem>
             <asp:ListItem>Female</asp:ListItem>
         </asp:RadioButtonList>
     </div>
@@ -25,4 +25,5 @@
         <asp:TextBox ID="tbxPassword" runat="server" TextMode="Password"></asp:TextBox>
     </div>
     <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click"/>
+    <asp:Label ID="lblStatus" runat="server" Text=""></asp:Label>
 </asp:Content>

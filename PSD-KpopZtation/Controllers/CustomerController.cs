@@ -10,14 +10,28 @@ namespace PSD_KpopZtation.Controllers
     public class CustomerController
     {
         Database1Entities db = Database.getInstance();
-        public string validate(string name, string email, string gender, string address, string password)
+        public static string validate(string name, string email, string gender, string address, string password)
         {
-            if(name.Length < 5 && name.Length > 50)
+            if(string.IsNullOrEmpty(name) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(address) || string.IsNullOrEmpty(password))
+            {
+                return "Fill-in all the data columns!";
+            }
+
+            if(name.Length < 5 || name.Length > 50)
             {
                 return "Name must be at least 5 and at most 50 characters long!";
-            } else if(email == CustomerRepository.getEmail(email))
+            } 
+            if(CustomerRepository.getEmail(email) != null)
             {
                 return "Email already exist in the system!";
+            } 
+            if(gender == "null")
+            {
+                return "Gender must be selected!";
+            } 
+            if(!address.EndsWith("Street"))
+            {
+                return "Address must end with \'Street\'";
             }
             return "Success!";
         }
