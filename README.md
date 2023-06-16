@@ -7,6 +7,7 @@
 4. Login email and password validation
 5. Login cookie (remember me)
 6. Profile page
+7. Home for guest and home front-end, navigation bar
 
 ## TO-DO
 3. Navigation Bar
