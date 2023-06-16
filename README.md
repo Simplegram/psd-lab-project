@@ -6,6 +6,7 @@
 3. Initial login page
 4. Login email and password validation
 5. Login cookie (remember me)
+6. Profile page
 
 ## TO-DO
 3. Navigation Bar
