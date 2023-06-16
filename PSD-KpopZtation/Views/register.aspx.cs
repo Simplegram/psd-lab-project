@@ -28,7 +28,7 @@ namespace PSD_KpopZtation
 
             lblStatus.Text = CustomerController.validateRegister(name, email, gender, address, password);
 
-            if (lblStatus.Equals("Success!"))
+            if (lblStatus.Text.Equals("Success!"))
             {
                 Response.Redirect("~/Views/login.aspx");
             }
