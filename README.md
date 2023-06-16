@@ -2,9 +2,9 @@
 
 ## Done
 1. Customer Register Validation
+2. Register customer to database
 
 ## TO-DO
-1. Register customer to database
 2. Login
 3. Navigation Bar
 4. Home
