@@ -21,7 +21,7 @@ namespace PSD_KpopZtation.Controllers
             {
                 return "Name must be at least 5 and at most 50 characters long!";
             } 
-            if(CustomerRepository.getEmail(email) != null)
+            if(!string.IsNullOrEmpty(CustomerRepository.getEmail(email)))
             {
                 return "Email already exist in the system!";
             } 
@@ -33,6 +33,7 @@ namespace PSD_KpopZtation.Controllers
             {
                 return "Address must end with \'Street\'";
             }
+
             return "Success!";
         }
     }
