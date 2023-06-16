@@ -36,5 +36,18 @@ namespace PSD_KpopZtation.Repositories
             int id = (from x in db.Customers select x.CustomerID).ToList().LastOrDefault();
             return id;
         }
+
+        public static string getPass(string email)
+        {
+            try
+            {
+                string password = (from x in db.Customers where x.CustomerEmail.Equals(email) select x.CustomerPassword).ToList().FirstOrDefault().ToString();
+                return password;
+            }
+            catch (NullReferenceException e)
+            {
+                return "null";
+            }
+        }
     }
 }

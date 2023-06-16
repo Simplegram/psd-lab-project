@@ -26,7 +26,7 @@ namespace PSD_KpopZtation
             string address = tbxAddress.Text;
             string password = tbxPassword.Text;
 
-            lblStatus.Text = CustomerController.validate(name, email, gender, address, password);
+            lblStatus.Text = CustomerController.validateRegister(name, email, gender, address, password);
         }
     }
 }
