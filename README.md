@@ -3,9 +3,10 @@
 ## Done
 1. Customer Register Validation
 2. Register customer to database
+3. Initial login page
 
 ## TO-DO
-2. Login
+2. Login algorithm
 3. Navigation Bar
 4. Home
 5. Artist Detail
