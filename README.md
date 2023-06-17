@@ -8,11 +8,10 @@
 5. Login cookie (remember me)
 6. Profile page
 7. Home for guest and home front-end, navigation bar
+8. Home for admin and artist grid for guest, customer, and admin home
+9. Artist detail page
 
 ## TO-DO
-3. Navigation Bar
-4. Home
-5. Artist Detail
 6. Insert Artist
 7. Update Artist
 8. Insert Album
