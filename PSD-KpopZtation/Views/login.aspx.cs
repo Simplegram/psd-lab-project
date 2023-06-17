@@ -15,11 +15,25 @@ namespace PSD_KpopZtation.Views
         Database1Entities db = Database.getInstance();
         protected void Page_Load(object sender, EventArgs e)
         {
+            Customer customer;
             if (!IsPostBack)
             {
                 if (Request.Cookies["sessionCookie"] != null)
                 {
-                    Response.Redirect("~/Views/customer/profile.aspx");
+                    var id = int.Parse(Request.Cookies["sessionCookie"].Value);
+
+                    customer = (from x in db.Customers where x.CustomerID == id select x).FirstOrDefault();
+
+                    Session["user"] = customer;
+
+                    if (customer.CustomerID == 1)
+                    {
+                        Response.Redirect("~/Views/admin/home.aspx");
+                    }
+                    else
+                    {
+                        Response.Redirect("~/Views/customer/home.aspx");
+                    }
                 }
             }
         }
@@ -57,7 +71,6 @@ namespace PSD_KpopZtation.Views
                 {
                     Response.Redirect("~/Views/customer/home.aspx");
                 }
-                
             }
         }
     }

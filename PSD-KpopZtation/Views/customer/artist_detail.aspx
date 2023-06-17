@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="title" id="home">
+    <div class="content">
         <h1>Artist Detail</h1>
         <div class="artist" id="card">
             <div class="artist" id="title">

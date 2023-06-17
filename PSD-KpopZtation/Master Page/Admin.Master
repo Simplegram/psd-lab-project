@@ -26,13 +26,6 @@
             font-family: 'Poppins';
         }
 
-        .title#home{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
         .menu-container a{
             color: black;
         }
@@ -44,21 +37,29 @@
         }
 
         #form1{
-            height: 100vh;
+            flex: 1;
+            height: auto;
             width: 100vw;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+
         header{
-            flex: 1;
-            width: 100%;
-            max-height: 5%;
+            width: 100vw;
+            height: 70px;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             background-color: cornflowerblue;
+        }
+        .content{
+            flex: 1;
+            display: flex;
+            min-height: 95%;
+            flex-direction: column;
+            align-items: center;
         }
 
         img{
@@ -122,7 +123,7 @@
                     <a id="linkHome" href="home.aspx">Home</a>
                     <a id="linkTransaction" href="">Transaction</a>
                     <a id="linkProfile" href="">Profile</a>
-                    <a id="linkLogout" href="">Logout</a>
+                    <a id="linkLogout" href="../admin/logout.aspx">Logout</a>
                 </div>
             </div>
         </header>

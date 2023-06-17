@@ -36,5 +36,18 @@ namespace PSD_KpopZtation.Views.admin
                 rptrArtist.DataBind();
             }
         }
+
+        protected void logout(object sender, EventArgs e)
+        {
+            string[] cookies = Request.Cookies.AllKeys;
+
+            foreach (string cookie in cookies)
+            {
+                Response.Cookies[cookie].Expires = DateTime.Now.AddSeconds(-1);
+            }
+
+            Session.Remove("User");
+            Response.Redirect("~/Views/home.aspx");
+        }
     }
 }

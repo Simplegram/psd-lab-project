@@ -47,15 +47,22 @@
             flex-direction: column;
             align-items: center;
         }
+
         header{
-            flex: 1;
-            width: 100%;
-            max-height: 5%;
+            width: 100vw;
+            height: 70px;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             background-color: cornflowerblue;
+        }
+        .content{
+            flex: 1;
+            display: flex;
+            min-height: 95%;
+            flex-direction: column;
+            align-items: center;
         }
 
         .column{
@@ -131,7 +138,7 @@
                     <a id="linkCart" href="cart.aspx">Cart</a>
                     <a id="linkTransaction" href="transaction.aspx">Transaction</a>
                     <a id="linkProfile" href="profile.aspx">Profile</a>
-                    <a id="linkLogout">Logout</a>
+                    <a></a>
                 </div>
             </div>
         </header>
