@@ -1,0 +1,140 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="PSD_KpopZtation.Master_Page.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        /* Poppins */
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+        /* Inter */
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+        /* Tilt Neon */
+        @import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+
+        *{
+            box-sizing: border-box;
+            text-align: center;
+        }
+        body, html{
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            font-family: 'Poppins';
+        }
+
+        .menu-container a{
+            color: black;
+        }
+        a{
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: white;
+        }
+
+        #form1{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header{
+            flex: 1;
+            width: 100%;
+            max-height: 5%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: cornflowerblue;
+        }
+        .content{
+            flex: 1;
+            display: flex;
+            max-height: 95%;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .links{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .column{
+            display: flex;
+            flex-direction: column;
+            gap: 5%;
+        }
+
+        .column#rblGender{
+            display: flex;
+            flex-direction: row;
+        }
+        #lblStatus{
+            background-color: red;
+        }
+        .title#home{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img{
+            width: 100%;
+        }
+
+        .artists{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .artist#card{
+            margin: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: cornflowerblue;
+            border-radius: 20px;
+            overflow: hidden;
+            font-family: 'AniMe Matrix - MB_EN';
+        }
+        .artist#title{
+            padding: 0 5% 0 5%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .artist#albums{
+            display: grid;
+            justify-items: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <div>
+                <div class="links">
+                    <a id="linkHome" href="home.aspx">Home</a>
+                    <a id="linkTransaction" href="">Transaction</a>
+                    <a id="linkProfile" href="">Profile</a>
+                    <a id="linkLogout" href="">Logout</a>
+                </div>
+            </div>
+        </header>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
