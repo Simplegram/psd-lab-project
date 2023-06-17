@@ -42,15 +42,6 @@ namespace PSD_KpopZtation.Views.admin
         protected global::System.Web.UI.HtmlControls.HtmlImage artist_img;
 
         /// <summary>
-        /// ltrlStatus control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltrlStatus;
-
-        /// <summary>
         /// ltrlPrice control.
         /// </summary>
         /// <remarks>
@@ -58,5 +49,14 @@ namespace PSD_KpopZtation.Views.admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrlPrice;
+
+        /// <summary>
+        /// ltrlStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrlStatus;
     }
 }
