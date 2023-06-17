@@ -13,7 +13,6 @@ namespace PSD_KpopZtation.Views.admin
     public partial class home : System.Web.UI.Page
     {
         Database1Entities db = Database.getInstance();
-        public List<Artist> artists = new List<Artist>();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -33,8 +32,8 @@ namespace PSD_KpopZtation.Views.admin
                     Session["user"] = customer;
                 }
 
-                ArtistController artistCtrl = new ArtistController();
-                artists = artistCtrl.getAllArtist();
+                rptrArtist.DataSource = db.Artists.ToList();
+                rptrArtist.DataBind();
             }
         }
     }

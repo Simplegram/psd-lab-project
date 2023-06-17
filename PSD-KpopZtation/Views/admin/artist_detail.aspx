@@ -11,30 +11,31 @@
             </div>
             <img id="artist_img"  runat="server"/>
         </div>
-        <%foreach (var t in albums)
-        {%>
         <div class="detail" id="artist">
             <div class="artist" id="albums">
                 <h2>Albums</h2>
-			    <div class="artist" id="card">
-				    <div class="artist" id="title">
-					    <h3><%=t.ArtistID %></h3>
-					    <h3><%=t.AlbumName %></h3>
-                        <h3>Price <asp:Literal ID="ltrlPrice" runat="server"></asp:Literal></h3>
-				    </div>
-                    <h3><%=t.AlbumDescription %></h3>
-                    <h3><%=t.AlbumStock %> pcs available</h3>
-				    <img id="albums_img" src="../../Images/albums/<%=t.AlbumImage%>"/>
-			    </div>
+                <asp:Repeater ID="rptrAlbums" runat="server">
+                    <ItemTemplate>
+                        <div class="album" id="card">
+				            <div class="album" id="title">
+                                <div style="font-size: 0.5rem; display: flex; justify-content: flex-start">
+                                    <h3><%# DataBinder.Eval(Container.DataItem, "AlbumID")%></h3>
+                                </div>
+                                <div style="display: flex; flex-direction: row; justify-content: space-between">
+                                    <h3 style="margin-top: 0"><%# DataBinder.Eval(Container.DataItem, "AlbumName")%></h3>
+                                    <h3 style="margin-top: 0">Rp<%# string.Format("{0, 15:N0}", DataBinder.Eval(Container.DataItem, "AlbumPrice").ToString())%></h3>
+                                </div>
+				            </div>
+                            <div style="display: flex; justify-content: flex-start">
+                                <h3 style="margin-top: 0"><%# DataBinder.Eval(Container.DataItem, "AlbumStock")%> pcs available</h3>
+                            </div>
+				            <img src="../../Images/albums/<%# DataBinder.Eval(Container.DataItem, "AlbumImage")%>" style="width: 512px"/>
+                            <h3 id="albumDescription" style="margin: 5%;"><%# DataBinder.Eval(Container.DataItem, "AlbumDescription")%></h3>
+			            </div>
+                    </ItemTemplate>
+                </asp:Repeater>
             </div>
         </div>
-        <div class="menu">
-            <div class="menu-container">
-                <a id="artist_update" href="artist_update.aspx?artistId=<%=t.ArtistID%>">Change Artist Detail</a>
-                <a id="artist_delete" href="artist_delete.aspx?artistId=<%=t.ArtistID%>">Delete Artist</a>
-            </div>
-        </div>
-        <%}%>
         <h3><asp:Literal ID="ltrlStatus" runat="server"></asp:Literal></h3>
     </div>
 </asp:Content>

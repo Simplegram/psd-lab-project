@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using PSD_KpopZtation.Models;
-using PSD_KpopZtation.Repositories;
+using PSD_KpopZtation.Handlers;
 
 namespace PSD_KpopZtation.Controllers
 {
     public class AlbumController
     {
-        AlbumRepository albumRepo;
+        AlbumHandler albumHandler;
         public AlbumController()
         {
-            albumRepo = new AlbumRepository();
+            albumHandler = new AlbumHandler();
         }
         public List<Album> getArtistAlbums(string id)
         {
-            return albumRepo.getArtistAlbums(id);
+            return albumHandler.getArtistAlbums(id);
         }
     }
 }

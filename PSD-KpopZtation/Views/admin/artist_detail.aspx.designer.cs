@@ -42,13 +42,13 @@ namespace PSD_KpopZtation.Views.admin
         protected global::System.Web.UI.HtmlControls.HtmlImage artist_img;
 
         /// <summary>
-        /// ltrlPrice control.
+        /// rptrAlbums control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltrlPrice;
+        protected global::System.Web.UI.WebControls.Repeater rptrAlbums;
 
         /// <summary>
         /// ltrlStatus control.

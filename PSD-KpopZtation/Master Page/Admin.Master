@@ -26,6 +26,13 @@
             font-family: 'Poppins';
         }
 
+        .title#home{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
         .menu-container a{
             color: black;
         }
@@ -52,40 +59,6 @@
             justify-content: center;
             align-items: center;
             background-color: cornflowerblue;
-        }
-        .content{
-            flex: 1;
-            display: flex;
-            max-height: 95%;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .links{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .column{
-            display: flex;
-            flex-direction: column;
-            gap: 5%;
-        }
-
-        .column#rblGender{
-            display: flex;
-            flex-direction: row;
-        }
-        #lblStatus{
-            background-color: red;
-        }
-        .title#home{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
         }
 
         img{
@@ -115,9 +88,24 @@
             flex-direction: row;
             justify-content: space-between;
         }
-        .artist#albums{
-            display: grid;
-            justify-items: center;
+
+        .album#card{
+            margin: 5%;
+            max-width: 512px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: cornflowerblue;
+            border-radius: 20px;
+            overflow: hidden;
+            font-family: 'Inter';
+        }
+        .album#title{
+            width: 100%;
+            padding: 0 5% 0 5%;
+            display: flex;
+            flex-direction: column;
         }
     </style>
 </head>
@@ -125,7 +113,12 @@
     <form id="form1" runat="server">
         <header>
             <div>
-                <div class="links">
+                <div class="links" style="
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 1.5rem;
+                    ">
                     <a id="linkHome" href="home.aspx">Home</a>
                     <a id="linkTransaction" href="">Transaction</a>
                     <a id="linkProfile" href="">Profile</a>

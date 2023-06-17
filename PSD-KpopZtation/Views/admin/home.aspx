@@ -6,17 +6,18 @@
         <h1>Welcome to KpopZstation Admin</h1>
         <h2>Our Artists</h2>
     </div>
-    <div class="artists">
-		<%foreach (var t in artists) 
-		{%>
-			<div class="artist" id="card">
-				<div class="artist" id="title">
-					<h3><%=t.ArtistID %></h3>
-					<h3><%=t.ArtistName %></h3>
+	<div class="artists">
+		<asp:Repeater ID="rptrArtist" runat="server">
+			<ItemTemplate>
+				<div class="artist" id="card">
+					<div class="artist" id="title">
+						<h3><%# DataBinder.Eval(Container.DataItem, "ArtistID")%></h3>
+						<h3><%# DataBinder.Eval(Container.DataItem, "ArtistName")%></h3>
+					</div>
+					<img src="../../Images/artists/<%# DataBinder.Eval(Container.DataItem, "ArtistImage")%>"/>
+					<a href="artist_detail.aspx?artistId=<%# DataBinder.Eval(Container.DataItem, "ArtistID")%>">View Artist</a>
 				</div>
-				<img src="../../Images/artists/<%=t.ArtistImage%>"/>
-				<a href="artist_detail.aspx?artistId=<%=t.ArtistID %>">View Artist</a>
-			</div>
-		<%}%>
+			</ItemTemplate>
+        </asp:Repeater>
 	</div>
 </asp:Content>

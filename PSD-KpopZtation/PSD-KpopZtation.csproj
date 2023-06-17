@@ -99,6 +99,7 @@
     </Content>
     <Content Include="Views\admin\artist_detail.aspx" />
     <Content Include="Views\admin\home.aspx" />
+    <Content Include="Views\customer\artist_detail.aspx" />
     <Content Include="Views\customer\home.aspx" />
     <Content Include="Views\customer\profile.aspx" />
     <Content Include="Views\home.aspx" />
@@ -111,6 +112,7 @@
     <Compile Include="Controllers\ArtistController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Factory\CustomerFactory.cs" />
+    <Compile Include="Handlers\AlbumHandler.cs" />
     <Compile Include="Master Page\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -175,6 +177,13 @@
     </Compile>
     <Compile Include="Views\admin\home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\customer\artist_detail.aspx.cs">
+      <DependentUpon>artist_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\customer\artist_detail.aspx.designer.cs">
+      <DependentUpon>artist_detail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\customer\home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
@@ -242,9 +251,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Handlers\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
