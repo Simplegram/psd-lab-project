@@ -9,7 +9,7 @@
 6. Profile page
 7. Home for guest and home front-end, navigation bar
 8. Home for admin and artist grid for guest, customer, and admin home
-9. Artist detail page
+9. Artist detail page for customer and admin
 
 ## TO-DO
 6. Insert Artist
