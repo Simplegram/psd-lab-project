@@ -18,5 +18,15 @@ namespace PSD_KpopZtation.Handlers
         {
             return albumRepo.getArtistAlbums(id);
         }
+
+        public void addAlbum(string name, string desc, int price, int stock, int albumId)
+        {
+            albumRepo.updateAlbum(name, desc, price, stock, albumId);
+        }
+
+        public void updateAlbum(string name, string desc, int price, int stock, int albumId)
+        {
+            albumRepo.updateAlbum(name, desc, price, stock, albumId);
+        }
     }
 }

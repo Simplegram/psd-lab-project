@@ -97,9 +97,12 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\admin\album_add.aspx" />
+    <Content Include="Views\admin\album_delete.aspx" />
     <Content Include="Views\admin\artist_detail.aspx" />
     <Content Include="Views\admin\home.aspx" />
     <Content Include="Views\admin\logout.aspx" />
+    <Content Include="Views\admin\album_update.aspx" />
     <Content Include="Views\customer\artist_detail.aspx" />
     <Content Include="Views\customer\home.aspx" />
     <Content Include="Views\customer\profile.aspx" />
@@ -112,6 +115,7 @@
     <Compile Include="Controllers\AlbumController.cs" />
     <Compile Include="Controllers\ArtistController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Factory\AlbumFactory.cs" />
     <Compile Include="Factory\CustomerFactory.cs" />
     <Compile Include="Handlers\AlbumHandler.cs" />
     <Compile Include="Master Page\Admin.Master.cs">
@@ -165,6 +169,20 @@
     <Compile Include="Repositories\AlbumRepository.cs" />
     <Compile Include="Repositories\ArtistRepository.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
+    <Compile Include="Views\admin\album_add.aspx.cs">
+      <DependentUpon>album_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\admin\album_add.aspx.designer.cs">
+      <DependentUpon>album_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\admin\album_delete.aspx.cs">
+      <DependentUpon>album_delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\admin\album_delete.aspx.designer.cs">
+      <DependentUpon>album_delete.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\admin\artist_detail.aspx.cs">
       <DependentUpon>artist_detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -185,6 +203,13 @@
     </Compile>
     <Compile Include="Views\admin\logout.aspx.designer.cs">
       <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\admin\album_update.aspx.cs">
+      <DependentUpon>album_update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\admin\album_update.aspx.designer.cs">
+      <DependentUpon>album_update.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\customer\artist_detail.aspx.cs">
       <DependentUpon>artist_detail.aspx</DependentUpon>

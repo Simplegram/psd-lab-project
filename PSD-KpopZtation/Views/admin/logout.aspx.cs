@@ -18,7 +18,7 @@ namespace PSD_KpopZtation.Views.admin
                 Response.Cookies[cookie].Expires = DateTime.Now.AddSeconds(-1);
             }
 
-            Session.Remove("User");
+            Session.Remove("user");
             Response.Redirect("home.aspx");
         }
     }

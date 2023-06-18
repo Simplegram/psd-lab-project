@@ -13,7 +13,7 @@ namespace PSD_KpopZtation.Factory
         {
             Customer customer = new Customer();
 
-            customer.CustomerID = CustomerRepository.getLastID()+1;
+            customer.CustomerID = CustomerRepository.getLastID() + 1;
             customer.CustomerName = name;
             customer.CustomerEmail = email;
             customer.CustomerGender = gender;

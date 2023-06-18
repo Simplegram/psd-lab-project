@@ -47,7 +47,7 @@ namespace PSD_KpopZtation.Views
                 Response.Cookies[cookie].Expires = DateTime.Now.AddSeconds(-1);
             }
 
-            Session.Remove("User");
+            Session.Remove("user");
             Response.Redirect("~/Views/home.aspx");
         }
 

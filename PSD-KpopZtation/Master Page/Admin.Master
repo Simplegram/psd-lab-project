@@ -62,6 +62,12 @@
             align-items: center;
         }
 
+        .column{
+            display: flex;
+            flex-direction: column;
+            gap: 5%;
+        }
+
         img{
             width: 100%;
         }
