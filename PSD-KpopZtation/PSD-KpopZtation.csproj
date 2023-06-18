@@ -99,6 +99,7 @@
     </Content>
     <Content Include="Views\admin\album_add.aspx" />
     <Content Include="Views\admin\album_delete.aspx" />
+    <Content Include="Views\admin\album_detail.aspx" />
     <Content Include="Views\admin\artist_detail.aspx" />
     <Content Include="Views\admin\home.aspx" />
     <Content Include="Views\admin\logout.aspx" />
@@ -106,7 +107,9 @@
     <Content Include="Views\admin\profile.aspx" />
     <Content Include="Views\admin\profile_update.aspx" />
     <Content Include="Views\customer\artist_detail.aspx" />
+    <Content Include="Views\customer\cart_page.aspx" />
     <Content Include="Views\customer\home.aspx" />
+    <Content Include="Views\customer\logout.aspx" />
     <Content Include="Views\customer\profile.aspx" />
     <Content Include="Views\customer\profile_update.aspx" />
     <Content Include="Views\home.aspx" />
@@ -187,6 +190,13 @@
     <Compile Include="Views\admin\album_delete.aspx.designer.cs">
       <DependentUpon>album_delete.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\admin\album_detail.aspx.cs">
+      <DependentUpon>album_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\admin\album_detail.aspx.designer.cs">
+      <DependentUpon>album_detail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\admin\artist_detail.aspx.cs">
       <DependentUpon>artist_detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -236,12 +246,26 @@
     <Compile Include="Views\customer\artist_detail.aspx.designer.cs">
       <DependentUpon>artist_detail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\customer\cart_page.aspx.cs">
+      <DependentUpon>cart_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\customer\cart_page.aspx.designer.cs">
+      <DependentUpon>cart_page.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\customer\home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\customer\home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\customer\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\customer\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\customer\profile.aspx.cs">
       <DependentUpon>profile.aspx</DependentUpon>

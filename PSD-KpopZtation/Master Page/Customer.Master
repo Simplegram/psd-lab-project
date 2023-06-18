@@ -60,6 +60,7 @@
         .content{
             flex: 1;
             display: flex;
+            width: 90%;
             min-height: 95%;
             flex-direction: column;
             align-items: center;
@@ -77,16 +78,18 @@
             justify-content: center;
             align-items: center;
         }
+
         img{
             width: 100%;
         }
+
         .artists{
             display: flex;
             justify-content: center;
             align-items: center;
         }
         .artist#card{
-            margin: 5%;
+            margin: 2%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -138,7 +141,7 @@
                     <a id="linkCart" href="cart.aspx">Cart</a>
                     <a id="linkTransaction" href="transaction.aspx">Transaction</a>
                     <a id="linkProfile" href="profile.aspx">Profile</a>
-                    <a></a>
+                    <a id="linkLogout" href="logout.aspx">Logout</a>
                 </div>
             </div>
         </header>

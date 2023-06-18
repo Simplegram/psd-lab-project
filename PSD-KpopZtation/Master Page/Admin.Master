@@ -57,6 +57,7 @@
         .content{
             flex: 1;
             display: flex;
+            width: 90%;
             min-height: 95%;
             flex-direction: column;
             align-items: center;
@@ -78,7 +79,7 @@
             align-items: center;
         }
         .artist#card{
-            margin: 5%;
+            margin: 2%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -97,8 +98,8 @@
         }
 
         .album#card{
-            margin: 5%;
             max-width: 512px;
+            margin: 2%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -106,7 +107,7 @@
             background-color: cornflowerblue;
             border-radius: 20px;
             overflow: hidden;
-            font-family: 'Inter';
+            font-family: 'AniMe Matrix - MB_EN';
         }
         .album#title{
             width: 100%;

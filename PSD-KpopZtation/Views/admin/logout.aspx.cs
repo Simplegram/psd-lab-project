@@ -19,7 +19,7 @@ namespace PSD_KpopZtation.Views.admin
             }
 
             Session.Remove("user");
-            Response.Redirect("home.aspx");
+            Response.Redirect("../home.aspx");
         }
     }
 }
