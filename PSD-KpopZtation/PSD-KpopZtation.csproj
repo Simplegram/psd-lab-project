@@ -103,9 +103,12 @@
     <Content Include="Views\admin\home.aspx" />
     <Content Include="Views\admin\logout.aspx" />
     <Content Include="Views\admin\album_update.aspx" />
+    <Content Include="Views\admin\profile.aspx" />
+    <Content Include="Views\admin\profile_update.aspx" />
     <Content Include="Views\customer\artist_detail.aspx" />
     <Content Include="Views\customer\home.aspx" />
     <Content Include="Views\customer\profile.aspx" />
+    <Content Include="Views\customer\profile_update.aspx" />
     <Content Include="Views\home.aspx" />
     <Content Include="Views\login.aspx" />
     <Content Include="Views\register.aspx" />
@@ -118,6 +121,7 @@
     <Compile Include="Factory\AlbumFactory.cs" />
     <Compile Include="Factory\CustomerFactory.cs" />
     <Compile Include="Handlers\AlbumHandler.cs" />
+    <Compile Include="Handlers\CustomerHandler.cs" />
     <Compile Include="Master Page\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -211,6 +215,20 @@
     <Compile Include="Views\admin\album_update.aspx.designer.cs">
       <DependentUpon>album_update.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\admin\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\admin\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\admin\profile_update.aspx.cs">
+      <DependentUpon>profile_update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\admin\profile_update.aspx.designer.cs">
+      <DependentUpon>profile_update.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\customer\artist_detail.aspx.cs">
       <DependentUpon>artist_detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -231,6 +249,13 @@
     </Compile>
     <Compile Include="Views\customer\profile.aspx.designer.cs">
       <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\customer\profile_update.aspx.cs">
+      <DependentUpon>profile_update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\customer\profile_update.aspx.designer.cs">
+      <DependentUpon>profile_update.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>

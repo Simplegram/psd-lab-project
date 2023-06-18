@@ -2,6 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <h2 style="margin-bottom: 0">Updating album<h3 style="margin: 0; font-weight: 400"><asp:Literal ID="ltrlAlbumName" runat="server"></asp:Literal></h3></h2>
+    <h2 style="margin-top: 0; margin-bottom: 0">From artist<h3 style="margin: 0 0 2.5% 0; font-weight: 400"><asp:Literal ID="ltrlArtistName" runat="server"></asp:Literal></h3></h2>
     <div style="display: flex; flex-direction: column; align-items: center">
         <div class="column">
             <asp:Label ID="lblAlbumName" runat="server"><b>Album Name</b></asp:Label>

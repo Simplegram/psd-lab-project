@@ -48,12 +48,16 @@ namespace PSD_KpopZtation.Views
             }
 
             Session.Remove("user");
-            Response.Redirect("~/Views/home.aspx");
+            Response.Redirect("../home.aspx");
         }
 
         protected void btnChangeProfile_Click(object sender, EventArgs e)
         {
+            Customer customer;
+            var id = int.Parse(Request.Cookies["sessionCookie"].Value);
+            customer = (from x in db.Customers where x.CustomerID == id select x).FirstOrDefault();
 
+            Response.Redirect("profile_update.aspx?userId=" + customer.CustomerID);
         }
     }
 }

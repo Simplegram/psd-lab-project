@@ -128,8 +128,8 @@
                     ">
                     <a id="linkHome" href="home.aspx">Home</a>
                     <a id="linkTransaction" href="">Transaction</a>
-                    <a id="linkProfile" href="">Profile</a>
-                    <a id="linkLogout" href="../admin/logout.aspx">Logout</a>
+                    <a id="linkProfile" href="profile.aspx">Profile</a>
+                    <a id="linkLogout" href="logout.aspx">Logout</a>
                 </div>
             </div>
         </header>

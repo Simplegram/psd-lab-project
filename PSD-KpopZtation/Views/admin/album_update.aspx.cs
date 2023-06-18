@@ -20,6 +20,7 @@ namespace PSD_KpopZtation.Views.admin
             {
                 Customer customer;
                 Album album;
+                Artist artist;
 
                 if (Session["user"] == null && Request.Cookies["sessionCookie"] == null)
                 {
@@ -38,6 +39,7 @@ namespace PSD_KpopZtation.Views.admin
                 string albumId = Request.QueryString["albumId"];
 
                 album = (from x in db.Albums where x.ArtistID.ToString().Equals(artistId) && x.AlbumID.ToString().Equals(albumId) select x).FirstOrDefault();
+                artist = (from x in db.Artists where x.ArtistID.ToString().Equals(artistId) select x).FirstOrDefault();
 
                 tbxAlbumName.Text = album.AlbumName;
                 tbxAlbumDesc.Text = album.AlbumDescription;
@@ -45,6 +47,9 @@ namespace PSD_KpopZtation.Views.admin
                 tbxAlbumStock.Text = album.AlbumStock.ToString();
                 var image = album.AlbumImage;
                 albumImage.Src = "../../Images/albums/" + image;
+
+                ltrlAlbumName.Text = album.AlbumName;
+                ltrlArtistName.Text = artist.ArtistName;
             }
         }
 

@@ -19,11 +19,45 @@ namespace PSD_KpopZtation.Repositories
             db.SaveChanges();
         }
 
+        public void updateCustomer(string name, string email, string gender, string address, string password, int userId)
+        {
+            Customer customer;
+            customer = (db.Customers.Find(userId));
+
+            customer.CustomerName = name;
+            customer.CustomerEmail = email;
+            customer.CustomerGender = gender;
+            customer.CustomerAddress = address;
+
+            Customer currentCustomer;
+            currentCustomer = (from x in db.Customers where x.CustomerID == userId select x).FirstOrDefault();
+            if (string.IsNullOrEmpty(password))
+            {
+                password = currentCustomer.CustomerPassword;
+            }
+
+            customer.CustomerPassword = password;
+
+            db.SaveChanges();
+        }
+
         public static string getEmail(string email)
         {
             try
             {
                 return (from x in db.Customers where x.CustomerEmail.Equals(email) select x.CustomerEmail).ToList().LastOrDefault().ToString();
+            }
+            catch (NullReferenceException e)
+            {
+                return null;
+            }
+        }
+
+        public static string getSpecificEmail(int userId)
+        {
+            try
+            {
+                return (from x in db.Customers where x.CustomerID == userId select x.CustomerEmail).ToList().LastOrDefault().ToString();
             }
             catch (NullReferenceException e)
             {
