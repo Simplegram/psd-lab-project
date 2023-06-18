@@ -10,7 +10,7 @@ namespace PSD_KpopZtation.Factory
 {
     public class AlbumFactory
     {
-        public static Album createAlbum(string name, string desc, int artistId, int price, int stock, string image)
+        public static Album createAlbum(string name, string desc, int price, int stock, string image, int artistId)
         {
             Album album = new Album();
 

@@ -19,7 +19,7 @@ namespace PSD_KpopZtation.Controllers
             return albumHandler.getArtistAlbums(id);
         }
 
-        public static string validateAlbum(string name, string desc, int price, int stock, string image)
+        public string validateAlbum(string name, string desc, int price, int stock, string image, int artistId)
         {
             if(string.IsNullOrEmpty(name) || string.IsNullOrEmpty(desc) || string.IsNullOrEmpty(price.ToString()) || string.IsNullOrEmpty(stock.ToString()) || string.IsNullOrEmpty(image))
             {

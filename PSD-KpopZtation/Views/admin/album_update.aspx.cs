@@ -57,21 +57,35 @@ namespace PSD_KpopZtation.Views.admin
 
             string name = tbxAlbumName.Text;
             string desc = tbxAlbumDesc.Text;
-            int price = int.Parse(tbxAlbumPrice.Text);
-            int stock = int.Parse(tbxAlbumStock.Text);
+            int price;
+            int stock;
+            int imageSize;
+            string imagePath = System.IO.Path.GetExtension(flAlbumImage.FileName);
+
+            try
+            {
+                price = int.Parse(tbxAlbumPrice.Text);
+                stock = int.Parse(tbxAlbumStock.Text);
+                imageSize = flAlbumImage.PostedFile.ContentLength;
+            }
+            catch (FormatException s)
+            {
+                ltrlStatus.Text = "Field can\'t be null or empty!";
+                return;
+            }
 
             if (flAlbumImage.HasFile)
             {
-                int imageSize = flAlbumImage.PostedFile.ContentLength;
-                string imagePath = System.IO.Path.GetExtension(flAlbumImage.FileName);
                 const int maxImageSize = 2000 * 1024;
 
                 if (imageSize > maxImageSize)
                 {
                     ltrlStatus.Text = "Image file must be lower than 2MB!";
+                    return;
                 } else if (!(extension.Contains(imagePath)))
                 {
                     ltrlStatus.Text = "File can only be in .png, .jpg, .jpeg, and .jfif format!";
+                    return;
                 }
             }
 

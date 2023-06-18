@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2>Adding album for <asp:Literal ID="ltrlArtistName" runat="server"></asp:Literal></h2>
+    <h2>Adding album for: <asp:Literal ID="ltrlArtistName" runat="server"></asp:Literal></h2>
     <div style="display: flex; flex-direction: column; align-items: center">
         <div class="column">
             <asp:Label ID="lblAlbumName" runat="server"><b>Album Name</b></asp:Label>
