@@ -38,7 +38,7 @@
                                 <div style="width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0 5% 5% 5%">
                                     <a href="album_detail.aspx?albumId=<%# DataBinder.Eval(Container.DataItem, "AlbumID") %>">View Album</a>
                                     <div style="width: 100%; display: flex; flex-direction: row; justify-content: space-between; padding: 0 5% 5% 5%">
-                                         <a href="album_update.aspx?albumId=<%# DataBinder.Eval(Container.DataItem, "AlbumID") %>&artistId=<%# DataBinder.Eval(Container.DataItem, "ArtistID") %>">Update Album</a>
+                                        <a href="album_update.aspx?albumId=<%# DataBinder.Eval(Container.DataItem, "AlbumID") %>&artistId=<%# DataBinder.Eval(Container.DataItem, "ArtistID") %>">Update Album</a>
                                         <a href="album_delete.aspx?albumId=<%# DataBinder.Eval(Container.DataItem, "AlbumID") %>&albumImage=<%# DataBinder.Eval(Container.DataItem, "AlbumImage") %>&artistId=<%# DataBinder.Eval(Container.DataItem, "ArtistID") %>">Delete Album</a>
                                     </div>
                                 </div>

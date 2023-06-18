@@ -14,6 +14,8 @@
         @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
         /* Tilt Neon */
         @import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+        /* Anton */
+        @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
         *{
             box-sizing: border-box;
@@ -87,7 +89,7 @@
             background-color: cornflowerblue;
             border-radius: 20px;
             overflow: hidden;
-            font-family: 'AniMe Matrix - MB_EN';
+            font-family: 'Anton';
         }
         .artist#title{
             padding: 0 5% 0 5%;
@@ -95,6 +97,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            font-size: 1.4rem;
         }
 
         .album#card{
@@ -107,7 +110,7 @@
             background-color: cornflowerblue;
             border-radius: 20px;
             overflow: hidden;
-            font-family: 'AniMe Matrix - MB_EN';
+            font-family: 'Inter';
         }
         .album#title{
             width: 100%;

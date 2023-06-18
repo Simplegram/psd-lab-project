@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <div style="width: 100%; height: 95vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
         <div class="column">
             <asp:Label ID="lblName" runat="server" Text="Full Name"></asp:Label>
             <asp:TextBox ID="tbxName" runat="server"></asp:TextBox>

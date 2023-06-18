@@ -17,6 +17,7 @@
 								<h3><%# DataBinder.Eval(Container.DataItem, "ArtistName")%></h3>
 							</div>
 							<img src="../../Images/artists/<%# DataBinder.Eval(Container.DataItem, "ArtistImage")%>"/>
+							<a href="artist_detail.aspx?artistId=<%# DataBinder.Eval(Container.DataItem, "ArtistID")%>">View Artist</a>
 						</div>
 					</div>
 				</ItemTemplate>

@@ -106,6 +106,9 @@
     <Content Include="Views\admin\album_update.aspx" />
     <Content Include="Views\admin\profile.aspx" />
     <Content Include="Views\admin\profile_update.aspx" />
+    <Content Include="Views\album_detail.aspx" />
+    <Content Include="Views\artist_detail.aspx" />
+    <Content Include="Views\customer\album_detail.aspx" />
     <Content Include="Views\customer\artist_detail.aspx" />
     <Content Include="Views\customer\cart_page.aspx" />
     <Content Include="Views\customer\home.aspx" />
@@ -238,6 +241,27 @@
     </Compile>
     <Compile Include="Views\admin\profile_update.aspx.designer.cs">
       <DependentUpon>profile_update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\album_detail.aspx.cs">
+      <DependentUpon>album_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\album_detail.aspx.designer.cs">
+      <DependentUpon>album_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\artist_detail.aspx.cs">
+      <DependentUpon>artist_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\artist_detail.aspx.designer.cs">
+      <DependentUpon>artist_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\customer\album_detail.aspx.cs">
+      <DependentUpon>album_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\customer\album_detail.aspx.designer.cs">
+      <DependentUpon>album_detail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\customer\artist_detail.aspx.cs">
       <DependentUpon>artist_detail.aspx</DependentUpon>

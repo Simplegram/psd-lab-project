@@ -14,8 +14,11 @@
         @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
         /* Tilt Neon */
         @import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+        /* Anton */
+        @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
         *{
+            text-align: center;
             box-sizing: border-box;
         }
         body, html{
@@ -31,7 +34,7 @@
             color: white;
         }
         #form1{
-            height: 100vh;
+            height: auto;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -49,16 +52,10 @@
         .content{
             flex: 1;
             display: flex;
-            max-height: 95%;
+            width: 90%;
+            min-height: 95%;
             flex-direction: column;
             align-items: center;
-        }
-
-        .links{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
         }
 
         .column{
@@ -74,22 +71,25 @@
         #lblStatus{
             background-color: red;
         }
+
         .title#home{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
+
         img{
             width: 100%;
         }
+
         .artists{
             display: flex;
             justify-content: center;
             align-items: center;
         }
         .artist#card{
-            margin: 5%;
+            margin: 2%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -97,7 +97,7 @@
             background-color: cornflowerblue;
             border-radius: 20px;
             overflow: hidden;
-            font-family: 'AniMe Matrix - MB_EN';
+            font-family: 'Anton';
         }
         .artist#title{
             padding: 0 5% 0 5%;
@@ -105,6 +105,27 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            font-size: 1.4rem;
+        }
+
+        .album#card{
+            margin: 5%;
+            max-width: 512px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: cornflowerblue;
+            border-radius: 20px;
+            overflow: hidden;
+            font-family: 'Inter';
+        }
+        .album#title{
+            width: 100%;
+            padding: 0 5% 0 5%;
+            display: flex;
+            flex-direction: column;
+            font-size: 1.2rem;
         }
     </style>
 </head>
@@ -112,17 +133,20 @@
     <form id="form1" runat="server">
         <header>
             <div>
-                <div class="links">
+                <div class="links" style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1.5rem;    
+                ">
                     <a id="linkHome" href="home.aspx">Home</a>
                     <a id="linkRegis" href="register.aspx">Register</a>
                     <a id="linkLogin" href="login.aspx">Login</a>
                 </div>
             </div>
         </header>
-        <div class="content">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
     </form>
 </body>
 </html>

@@ -15,7 +15,7 @@
             <div class="artist" id="albums">
                 <h2>Albums</h2>
                 <div style="width: 100%; display: grid; grid-template-columns: repeat(3, 1fr)">
-                    <asp:Repeater ID="rptrAlbums" runat="server">
+                    <asp:Repeater ID="rptrAlbums" runat="server" OnItemDataBound="rptrAlbums_ItemDataBound">
                         <ItemTemplate>
                             <div class="album" id="card">
 				                <div class="album" id="title">
@@ -24,7 +24,7 @@
                                     </div>
                                     <div style="display: flex; flex-direction: row; justify-content: space-between">
                                         <h3 style="margin-top: 0"><%# DataBinder.Eval(Container.DataItem, "AlbumName")%></h3>
-                                        <h3 style="margin-top: 0">Rp<%# string.Format("{0, 15:N0}", DataBinder.Eval(Container.DataItem, "AlbumPrice").ToString())%></h3>
+                                        <h3 style="margin-top: 0" runat="server">Rp<asp:Literal ID="ltrlAlbumPrice" runat="server"></asp:Literal></h3>
                                     </div>
 				                </div>
                                 <div style="display: flex; justify-content: flex-start">
@@ -32,7 +32,10 @@
                                 </div>
 				                <img src="../../Images/albums/<%# DataBinder.Eval(Container.DataItem, "AlbumImage")%>" style="width: 512px"/>
                                 <h3 id="albumDescription" style="margin: 5%; font-family: Inter"><%# DataBinder.Eval(Container.DataItem, "AlbumDescription")%></h3>
-			                </div>
+			                    <div style="width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0 5% 5% 5%">
+                                    <a href="album_detail.aspx?albumId=<%# DataBinder.Eval(Container.DataItem, "AlbumID") %>">View Album</a>
+                                </div>
+                            </div>
                         </ItemTemplate>
                     </asp:Repeater>
                 </div>
