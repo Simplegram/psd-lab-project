@@ -10,12 +10,12 @@
 7. Home for guest and home front-end, navigation bar
 8. Home for admin and artist grid for guest, customer, and admin home
 9. Artist detail page for customer and admin
+10. Update Album
 
 ## TO-DO
 6. Insert Artist
 7. Update Artist
 8. Insert Album
-9. Update Album
 10. Album Detail
 11. Cart Page
 12. Transaction History
