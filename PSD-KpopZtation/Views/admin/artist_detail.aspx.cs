@@ -58,5 +58,11 @@ namespace PSD_KpopZtation.Views.admin
                 }
             }
         }
+
+        protected void btnAddAlbum_Click(object sender, EventArgs e)
+        {
+            string artistId = Request.QueryString["artistId"];
+            Response.Redirect("album_add.aspx?artistId=" + artistId);
+        }
     }
 }

@@ -6,12 +6,16 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using PSD_KpopZtation.Models;
 using PSD_KpopZtation.Repositories;
+using PSD_KpopZtation.Controllers;
 
 namespace PSD_KpopZtation.Views.admin
 {
     public partial class album_delete : System.Web.UI.Page
     {
         Database1Entities db = Database.getInstance();
+
+        AlbumController albumController = new AlbumController();
+        Album album = new Album();
         protected void Page_Load(object sender, EventArgs e)
         {
             Customer customer;
@@ -31,6 +35,9 @@ namespace PSD_KpopZtation.Views.admin
                 }
 
                 string albumId = Request.QueryString["albumId"];
+
+                album = albumController.getAlbum(int.Parse(albumId));
+                albumController.deleteAlbum(int.Parse(albumId));
             }
         }
     }

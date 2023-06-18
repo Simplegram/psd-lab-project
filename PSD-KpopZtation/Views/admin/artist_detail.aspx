@@ -14,11 +14,11 @@
         <div class="detail" id="artist">
             <div class="artist" id="albums">
                 <h2>Albums</h2>
+                <div>
+                    <asp:Button ID="btnAddAlbum" runat="server" Text="Add Album" OnClick="btnAddAlbum_Click"/>
+                </div>
                 <asp:Repeater ID="rptrAlbums" runat="server">
                     <ItemTemplate>
-                        <div>
-                            <a style="color: black; text-decoration:underline; font-size: 1rem" href="album_add.aspx?artistId=<%# DataBinder.Eval(Container.DataItem, "ArtistID") %>">Add Album</a>
-                        </div>
                         <div class="album" id="card">
 				            <div class="album" id="title">
                                 <div style="font-size: 0.5rem; display: flex; justify-content: flex-start">
@@ -36,7 +36,7 @@
                             <h3 id="albumDescription" style="margin: 5%;"><%# DataBinder.Eval(Container.DataItem, "AlbumDescription")%></h3>
                             <div style="width: 100%; display: flex; flex-direction: row; justify-content: space-between; padding: 0 5% 5% 5%">
                                 <a href="album_update.aspx?albumId=<%# DataBinder.Eval(Container.DataItem, "AlbumID") %>&artistId=<%# DataBinder.Eval(Container.DataItem, "ArtistID") %>">Update Album</a>
-                                <a href="album_delete.aspx?albumId=<%# DataBinder.Eval(Container.DataItem, "AlbumID") %>&artistId=<%# DataBinder.Eval(Container.DataItem, "ArtistID") %>">Delete Album</a>
+                                <a href="album_delete.aspx?albumId=<%# DataBinder.Eval(Container.DataItem, "AlbumID") %>">Delete Album</a>
                             </div>
 			            </div>
                     </ItemTemplate>

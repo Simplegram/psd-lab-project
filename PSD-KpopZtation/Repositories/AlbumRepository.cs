@@ -14,6 +14,8 @@ namespace PSD_KpopZtation.Repositories
         {
             Album album = AlbumFactory.createAlbum(name, desc, price, stock, image, artistId);
 
+            album.AlbumID = getArtistLastAlbumID(artistId) + 1;
+
             db.Albums.Add(album);
             db.SaveChanges();
         }
@@ -22,10 +24,28 @@ namespace PSD_KpopZtation.Repositories
             return (from album in db.Albums where album.ArtistID.ToString().Equals(id) select album).ToList();
         }
 
+        public static int getArtistLastAlbumID(int artistId)
+        {
+            int id = (from x in db.Albums where x.ArtistID == artistId select x.AlbumID).ToList().LastOrDefault();
+            return id;
+        }
+
         public static int getLastID()
         {
             int id = (from x in db.Albums select x.AlbumID).ToList().LastOrDefault();
             return id;
+        }
+
+        public Album getAlbum(int albumId)
+        {
+            return (from x in db.Albums where x.AlbumID == albumId select x).FirstOrDefault();
+        }
+
+        public void deleteAlbum(int albumId)
+        {
+            Album album = getAlbum(albumId);
+            db.Albums.Remove(album);
+            db.SaveChanges();
         }
 
         public void updateAlbum(string name, string desc, int price, int stock, int albumId)
@@ -38,6 +58,21 @@ namespace PSD_KpopZtation.Repositories
             album.AlbumStock = stock;
 
             db.SaveChanges();
+        }
+
+        public bool checkImage(string image)
+        {
+            string searchImage = (from x in db.Albums where x.AlbumImage.Equals(image) select x.AlbumImage).ToList().LastOrDefault();
+            System.Diagnostics.Debug.WriteLine(searchImage);
+
+            if (string.IsNullOrEmpty(searchImage))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

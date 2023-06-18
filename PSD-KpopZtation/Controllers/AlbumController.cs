@@ -19,6 +19,16 @@ namespace PSD_KpopZtation.Controllers
             return albumHandler.getArtistAlbums(id);
         }
 
+        public Album getAlbum(int albumId)
+        {
+            return albumHandler.getAlbum(albumId);
+        }
+
+        public void deleteAlbum(int albumId)
+        {
+            albumHandler.deleteAlbum(albumId);
+        }
+
         public string validateAlbum(string name, string desc, int price, int stock, string image, int artistId)
         {
             if(string.IsNullOrEmpty(name) || string.IsNullOrEmpty(desc) || string.IsNullOrEmpty(price.ToString()) || string.IsNullOrEmpty(stock.ToString()) || string.IsNullOrEmpty(image))
@@ -42,6 +52,12 @@ namespace PSD_KpopZtation.Controllers
             {
                 return "Stock must not be empty or below zero";
             }
+            if (albumHandler.checkImage(image))
+            {
+                return "Image already exists!";
+            }
+
+            albumHandler.addAlbum(name, desc, price, stock, image, artistId);
 
             return "Success!";
         }

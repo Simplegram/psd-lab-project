@@ -14,7 +14,6 @@ namespace PSD_KpopZtation.Factory
         {
             Album album = new Album();
 
-            album.AlbumID = AlbumRepository.getLastID() + 1;
             album.ArtistID = artistId;
             album.AlbumName = name;
             album.AlbumDescription = desc;
