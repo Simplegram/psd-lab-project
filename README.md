@@ -11,11 +11,11 @@
 8. Home for admin and artist grid for guest, customer, and admin home
 9. Artist detail page for customer and admin
 10. Update Album
+11. Insert Album
 
 ## TO-DO
 6. Insert Artist
 7. Update Artist
-8. Insert Album
 10. Album Detail
 11. Cart Page
 12. Transaction History
