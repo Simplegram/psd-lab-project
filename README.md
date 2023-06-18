@@ -5,7 +5,7 @@
 - [x] View Artists
 - [ ] Insert Artist
 - [ ] Update Artist
-- [ ] Delete Artis
+- [ ] Delete Artist
 - [x] View Albums
 - [x] Insert Album
 - [x] Update Album
