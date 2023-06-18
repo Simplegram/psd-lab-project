@@ -14,11 +14,11 @@
 11. Insert Album
 12. Update Profile for admin and customer
 13. Profile page for admin
+14. Album Detail
 
 ## TO-DO
 6. Insert Artist
 7. Update Artist
-10. Album Detail
-11. Cart Page
+11. Cart Page and add to cart
 12. Transaction History
 13. Transaction Report
