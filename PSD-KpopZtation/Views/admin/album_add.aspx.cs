@@ -87,10 +87,11 @@ namespace PSD_KpopZtation.Views.admin
 
             ltrlStatus.Text = albumController.validateAlbum(name, desc, price, stock, image, int.Parse(artistId));
 
-            if (ltrlStatus.Equals("Success!"))
+            if (ltrlStatus.Text.Equals("Success!"))
             {
-                string savePath = "../../Images/albums/";
-                flAlbumImage.PostedFile.SaveAs(savePath);
+                string path = Server.MapPath(@"../../Images/albums/" + image);
+                flAlbumImage.PostedFile.SaveAs(path);
+                System.Diagnostics.Debug.WriteLine(path);
                 Response.Redirect("artist_detail.aspx?artistId=" + artistId);
             }
         }

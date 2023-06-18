@@ -14,7 +14,16 @@ namespace PSD_KpopZtation.Repositories
         {
             Album album = AlbumFactory.createAlbum(name, desc, price, stock, image, artistId);
 
-            album.AlbumID = getArtistLastAlbumID(artistId) + 1;
+            int lastAlbumID = getArtistLastAlbumID(artistId);
+
+            if (lastAlbumID == 0)
+            {
+                album.AlbumID = (artistId * 10000) + 1;
+            } 
+            else
+            {
+                album.AlbumID = getArtistLastAlbumID(artistId) + 1;
+            }
 
             db.Albums.Add(album);
             db.SaveChanges();
@@ -33,7 +42,14 @@ namespace PSD_KpopZtation.Repositories
         public static int getLastID()
         {
             int id = (from x in db.Albums select x.AlbumID).ToList().LastOrDefault();
-            return id;
+            if (id == 0)
+            {
+                return -1;
+            }
+            else
+            {
+                return id;
+            }
         }
 
         public Album getAlbum(int albumId)
