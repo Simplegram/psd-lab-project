@@ -16,7 +16,7 @@
 
 ### Customer
 - [x] View Artists
-- [ ] View Albums
+- [x] View Albums
 - [ ] Order Album
 - [x] View Profile 
 - [ ] View Carts
@@ -29,4 +29,4 @@
 - [x] Login
 - [x] Register
 - [x] View Artists
-- [ ] View Albums
+- [x] View Albums
