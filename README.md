@@ -23,7 +23,7 @@
 - [x] Update Profile
 - [ ] Delete Account
 - [x] View Transactions History
-- [ ] View Transaction Detail
+- [x] View Transaction Detail
 
 ### Guest
 - [x] Login
