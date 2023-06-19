@@ -17,12 +17,12 @@
 ### Customer
 - [x] View Artists
 - [x] View Albums
-- [ ] Order Album
+- [x] Order Album
 - [x] View Profile 
-- [ ] View Carts
+- [x] View Carts
 - [x] Update Profile
 - [ ] Delete Account
-- [ ] View Transactions History
+- [x] View Transactions History
 - [ ] View Transaction Detail
 
 ### Guest
