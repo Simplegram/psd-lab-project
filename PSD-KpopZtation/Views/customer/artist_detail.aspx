@@ -15,7 +15,7 @@
             <div class="artist" id="albums">
                 <h2>Albums</h2>
                 <div style="width: 100%; display: grid; grid-template-columns: repeat(3, 1fr)">
-                    <asp:Repeater ID="rptrAlbums" runat="server" OnItemDataBound="rptrAlbums_ItemDataBound">
+                    <asp:Repeater ID="rptrAlbums" runat="server">
                         <ItemTemplate>
                             <div class="album" id="card">
 				                <div class="album" id="title">
@@ -24,7 +24,7 @@
                                     </div>
                                     <div style="display: flex; flex-direction: row; justify-content: space-between">
                                         <h3 style="margin-top: 0"><%# DataBinder.Eval(Container.DataItem, "AlbumName")%></h3>
-                                        <h3 style="margin-top: 0" runat="server">Rp<asp:Literal ID="ltrlAlbumPrice" runat="server"></asp:Literal></h3>
+                                        <h3 style="margin-top: 0" runat="server">Rp<%# DataBinder.Eval(Container.DataItem, "AlbumPrice", "{0, 15:N0}")%></h3>
                                     </div>
 				                </div>
                                 <div style="display: flex; justify-content: flex-start">

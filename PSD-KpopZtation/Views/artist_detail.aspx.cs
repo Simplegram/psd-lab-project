@@ -43,13 +43,5 @@ namespace PSD_KpopZtation.Views
                 }
             }
         }
-
-        protected void rptrAlbums_ItemDataBound(object sender, RepeaterItemEventArgs e)
-        {
-            Album albumDB;
-            string artistId = Request.QueryString["artistId"];
-            albumDB = (from x in db.Albums where x.ArtistID.ToString().Equals(artistId) select x).FirstOrDefault();
-            ((Literal)e.Item.FindControl("ltrlAlbumPrice")).Text = string.Format("{0, 15:N0}", albumDB.AlbumPrice);
-        }
     }
 }

@@ -83,10 +83,10 @@
     <Content Include="Images\albums\blckwht.png" />
     <Content Include="Images\albums\nebula.png" />
     <Content Include="Images\albums\starburst.png" />
-    <Content Include="Images\artists\anyeongboys.png" />
-    <Content Include="Images\artists\blckwht.png" />
-    <Content Include="Images\artists\bluelight.png" />
-    <Content Include="Images\artists\stargirls.png" />
+    <Content Include="Images\artists\bts.jfif" />
+    <Content Include="Images\artists\iu.jpeg" />
+    <Content Include="Images\artists\ive.jfif" />
+    <Content Include="Images\artists\nct127.jfif" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
