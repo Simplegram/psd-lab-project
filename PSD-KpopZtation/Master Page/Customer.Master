@@ -134,8 +134,8 @@
                     gap: 1.5rem;    
                 ">
                     <a id="linkHome" href="home.aspx">Home</a>
-                    <a id="linkCart" href="cart.aspx">Cart</a>
-                    <a id="linkTransaction" href="transaction.aspx">Transaction</a>
+                    <a id="linkCart" href="cart_page.aspx">Cart</a>
+                    <a id="linkTransaction" href="transaction_history.aspx">Transaction</a>
                     <a id="linkProfile" href="profile.aspx">Profile</a>
                     <a id="linkLogout" href="logout.aspx">Logout</a>
                 </div>

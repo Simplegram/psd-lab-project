@@ -24,7 +24,7 @@
                                     </div>
                                     <div style="display: flex; flex-direction: row; justify-content: space-between">
                                         <h3 style="margin-top: 0"><%# DataBinder.Eval(Container.DataItem, "AlbumName")%></h3>
-                                        <h3 style="margin-top: 0" runat="server">Rp<asp:Literal ID="ltrlAlbumPrice" runat="server"></asp:Literal></h3>
+                                        <h3 style="margin-top: 0">Rp<asp:Literal ID="ltrlAlbumPrice" runat="server"></asp:Literal></h3>
                                     </div>
 				                </div>
                                 <div style="display: flex; justify-content: flex-start">

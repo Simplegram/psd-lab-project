@@ -28,10 +28,16 @@ namespace PSD_KpopZtation.Repositories
             db.Albums.Add(album);
             db.SaveChanges();
         }
-        public List<Album> getArtistAlbums(string id)
+        public List<Album> getArtistAlbums(string artistId)
         {
-            return (from album in db.Albums where album.ArtistID.ToString().Equals(id) select album).ToList();
+            return (from album in db.Albums where album.ArtistID.ToString().Equals(artistId) select album).ToList();
         }
+
+        public List<Album> getAlbumFromID(int albumId)
+        {
+            return (from album in db.Albums where album.AlbumID == albumId select album).ToList();
+        }
+
 
         public static int getArtistLastAlbumID(int artistId)
         {
@@ -89,6 +95,12 @@ namespace PSD_KpopZtation.Repositories
             {
                 return true;
             }
+        }
+
+        public static int getAlbumStock(int albumId)
+        {
+            int stock = (from x in db.Albums where x.AlbumID == albumId select x.AlbumStock).ToList().LastOrDefault();
+            return stock;
         }
     }
 }

@@ -20,5 +20,10 @@
 			<img id="album_img" style="width: 512px" runat="server"/>
             <h3 id="albumDescription" style="margin: 5%;"><asp:Literal ID="ltrlAlbumDesc" runat="server"></asp:Literal></h3>
         </div>
+        <div>
+            <asp:TextBox ID="tbxAddCart" runat="server"></asp:TextBox>
+            <asp:Button ID="btnAddCart" runat="server" Text="Add to cart" OnClick="btnAddCart_Click"/>
+        </div>
+        <asp:Literal ID="ltrlStatus" runat="server"></asp:Literal>
     </div>
 </asp:Content>

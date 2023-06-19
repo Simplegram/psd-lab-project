@@ -115,6 +115,8 @@
     <Content Include="Views\customer\logout.aspx" />
     <Content Include="Views\customer\profile.aspx" />
     <Content Include="Views\customer\profile_update.aspx" />
+    <Content Include="Views\customer\transaction_history.aspx" />
+    <Content Include="Views\customer\transaction_history_add.aspx" />
     <Content Include="Views\home.aspx" />
     <Content Include="Views\login.aspx" />
     <Content Include="Views\register.aspx" />
@@ -123,11 +125,17 @@
   <ItemGroup>
     <Compile Include="Controllers\AlbumController.cs" />
     <Compile Include="Controllers\ArtistController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\TransactionController.cs" />
     <Compile Include="Factory\AlbumFactory.cs" />
+    <Compile Include="Factory\CartFactory.cs" />
     <Compile Include="Factory\CustomerFactory.cs" />
+    <Compile Include="Factory\TransactionFactory.cs" />
     <Compile Include="Handlers\AlbumHandler.cs" />
+    <Compile Include="Handlers\CartHandler.cs" />
     <Compile Include="Handlers\CustomerHandler.cs" />
+    <Compile Include="Handlers\TransactionHandler.cs" />
     <Compile Include="Master Page\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -178,7 +186,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AlbumRepository.cs" />
     <Compile Include="Repositories\ArtistRepository.cs" />
+    <Compile Include="Repositories\CartRepository.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
+    <Compile Include="Repositories\TransactionRepository.cs" />
     <Compile Include="Views\admin\album_add.aspx.cs">
       <DependentUpon>album_add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -304,6 +314,20 @@
     </Compile>
     <Compile Include="Views\customer\profile_update.aspx.designer.cs">
       <DependentUpon>profile_update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\customer\transaction_history.aspx.cs">
+      <DependentUpon>transaction_history.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\customer\transaction_history.aspx.designer.cs">
+      <DependentUpon>transaction_history.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\customer\transaction_history_add.aspx.cs">
+      <DependentUpon>transaction_history_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\customer\transaction_history_add.aspx.designer.cs">
+      <DependentUpon>transaction_history_add.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
