@@ -91,7 +91,6 @@ namespace PSD_KpopZtation.Views.admin
             {
                 string path = Server.MapPath(@"../../Images/albums/" + image);
                 flAlbumImage.PostedFile.SaveAs(path);
-                System.Diagnostics.Debug.WriteLine(path);
                 Response.Redirect("artist_detail.aspx?artistId=" + artistId);
             }
         }

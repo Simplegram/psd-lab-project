@@ -5,6 +5,7 @@
 	<div class="title" id="home">
         <h1>Welcome to KpopZstation Admin</h1>
         <h2 style="margin-bottom: 0">Artists</h2>
+		<a href="artist_insert.aspx" style="color: black;">Insert Artist</a>
     </div>
 	<div class="artists">
 		<asp:Repeater ID="rptrArtist" runat="server">

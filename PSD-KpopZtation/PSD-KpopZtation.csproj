@@ -101,6 +101,7 @@
     <Content Include="Views\admin\album_delete.aspx" />
     <Content Include="Views\admin\album_detail.aspx" />
     <Content Include="Views\admin\artist_detail.aspx" />
+    <Content Include="Views\admin\artist_insert.aspx" />
     <Content Include="Views\admin\home.aspx" />
     <Content Include="Views\admin\logout.aspx" />
     <Content Include="Views\admin\album_update.aspx" />
@@ -129,10 +130,12 @@
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\TransactionController.cs" />
     <Compile Include="Factory\AlbumFactory.cs" />
+    <Compile Include="Factory\ArtistFactory.cs" />
     <Compile Include="Factory\CartFactory.cs" />
     <Compile Include="Factory\CustomerFactory.cs" />
     <Compile Include="Factory\TransactionFactory.cs" />
     <Compile Include="Handlers\AlbumHandler.cs" />
+    <Compile Include="Handlers\ArtistHandler.cs" />
     <Compile Include="Handlers\CartHandler.cs" />
     <Compile Include="Handlers\CustomerHandler.cs" />
     <Compile Include="Handlers\TransactionHandler.cs" />
@@ -216,6 +219,13 @@
     </Compile>
     <Compile Include="Views\admin\artist_detail.aspx.designer.cs">
       <DependentUpon>artist_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\admin\artist_insert.aspx.cs">
+      <DependentUpon>artist_insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\admin\artist_insert.aspx.designer.cs">
+      <DependentUpon>artist_insert.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\admin\home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
